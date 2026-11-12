@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Không gian cá nhân của Nguyễn Hoàng Hải.">
+<title>Nguyễn Hoàng Hải — Personal Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&family=Noto+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#111719;--surface:#192225;--surface2:#202c30;--paper:#eeeae1;--muted:#a8b1ad;--line:rgba(238,234,225,.15);--sage:#a6beb6;--sand:#c7ad98;--sans:"Be Vietnam Pro",Arial,sans-serif;--serif:"DM Serif Display",Georgia,serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--paper);font-family:var(--sans);font-weight:300;line-height:1.7}a{color:inherit;text-decoration:none}.shell{width:min(1120px,calc(100% - 44px));margin:auto}
+header{display:flex;justify-content:space-between;align-items:center;padding:23px 0;border-bottom:1px solid var(--line);gap:20px}.brand{font:22px var(--serif);letter-spacing:.02em}.brand b{color:var(--sage);font-weight:400}nav{display:flex;gap:23px;flex-wrap:wrap}nav a{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}nav a:hover{color:var(--sage)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center;padding:90px 0 85px;min-height:550px}.eyebrow{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--sage)}h1{font:clamp(54px,8vw,92px)/.98 var(--serif);letter-spacing:-.04em;font-weight:400;margin:23px 0}h1 em{color:var(--sage);font-weight:400}.lead{max-width:530px;color:var(--muted);font-size:14px}.birth{display:inline-flex;gap:12px;align-items:center;margin-top:28px;padding:10px 14px;border:1px solid var(--line);font-size:11px;letter-spacing:.07em;color:#d5d8d0}.birth span{color:var(--sage)}
+.hero-art{height:360px;position:relative;overflow:hidden;border:1px solid var(--line);background:radial-gradient(ellipse at 50% 45%,#526a68 0,#293b3c 28%,#182426 65%,#111719 100%);display:grid;place-items:center}.hero-art:before,.hero-art:after{content:"";position:absolute;width:260px;height:260px;border:1px solid #c9d3c7;opacity:.35;border-radius:50%;transform:scaleY(.55) rotate(-25deg)}.hero-art:after{width:190px;height:190px;transform:scaleY(.75) rotate(35deg)}.moon{width:100px;height:100px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#f1ead8,#a6beb6 45%,#526a68 78%);box-shadow:0 0 80px #a6beb644}.hero-art small{position:absolute;bottom:15px;left:17px;font-size:9px;letter-spacing:.2em;color:#d5ddd5}
+section{padding:75px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:30px}.section-head h2{font:clamp(36px,5vw,54px)/1.05 var(--serif);font-weight:400;letter-spacing:-.025em;margin:8px 0 0}.section-head p{max-width:330px;color:var(--muted);font-size:12px;margin:0}.about{display:grid;grid-template-columns:.7fr 1.3fr;gap:50px}.about .label{color:var(--sage);font-size:10px;letter-spacing:.15em}.about-copy{font:clamp(19px,2.5vw,25px)/1.55 var(--serif);max-width:700px}.about-copy small{display:block;font:12px/1.9 var(--sans);color:var(--muted);margin-top:20px}
+.gallery-intro{font-size:12px;color:var(--muted);margin:-10px 0 22px}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.tile{background:var(--surface);border:1px solid var(--line);overflow:hidden;min-width:0}.photo{height:250px;background:linear-gradient(145deg,#304447,#1a2629);position:relative;overflow:hidden}.photo img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .45s;}.tile:hover .photo img{transform:scale(1.04)}.photo .placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;color:#b9c8c0;font:italic 19px var(--serif);background:radial-gradient(circle at 50% 40%,#536a67,#1a292b 75%)}.photo.has-image .placeholder{display:none}.tile-info{padding:16px 17px 18px}.tile-info h3{font:22px var(--serif);font-weight:400;margin:0 0 3px}.tile-info p{font-size:10px;color:var(--muted);margin:0}.music-grid .photo{height:210px}.drawing-grid .photo{height:270px}.upload-note{margin-top:18px;color:var(--muted);font-size:10px;line-height:1.8}.upload-note code{color:var(--sage)}
+
+.profile-grid{display:grid;grid-template-columns:270px 1fr;gap:42px;align-items:start}
+.portrait{height:350px;position:relative;overflow:hidden;background:linear-gradient(145deg,#34484a,#192629);border:1px solid var(--line)}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.portrait-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#c3d0c8;font:italic 21px var(--serif);background:radial-gradient(circle at 50% 35%,#526b67,#1a292b 78%)}
+.portrait-placeholder small{font:10px var(--sans);color:#aabbb2;margin-top:7px}
+.portrait.has-image .portrait-placeholder{display:none}
+.dream-school{margin-top:35px;padding:24px 27px;border:1px solid var(--line);background:var(--surface);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.dream-school h3{font:25px var(--serif);font-weight:400;margin:7px 0 2px}
+.dream-school p{font-size:12px;color:var(--muted);margin:0}
+.dream-school strong{color:var(--sage);font-weight:500}
+.hau-mark{font:42px var(--serif);color:var(--sage);white-space:nowrap}.hau-mark span{color:var(--sand)}
+/* Film posters: show the complete poster without cropping. */
+#films .photo{height:390px;background:#101719;display:flex;align-items:center;justify-content:center;padding:12px}
+#films .photo img{width:100%;height:100%;object-fit:contain}
+#films .photo .placeholder{inset:12px}
+/* Music artwork: square album-cover presentation. */
+#music .gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
+#music .photo{height:auto;aspect-ratio:1/1;background:#101719}
+#music .photo img{width:100%;height:100%;object-fit:cover}
+#music .photo .placeholder{inset:0}
+/* Drawings: portrait A3 paper ratio (297:420). */
+#drawing .gallery{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}
+#drawing .photo{height:auto;aspect-ratio:297/420;background:#e8e5dc;padding:0}
+#drawing .photo img{width:100%;height:100%;object-fit:contain}
+#drawing .photo .placeholder{background:#e8e5dc;color:#5c6863;inset:0}
+#drawing .photo .placeholder:before{content:"";position:absolute;inset:13px;border:1px solid #b9b8ad;pointer-events:none}
+#drawing .photo .placeholder{z-index:1}
+#drawing .photo.has-image{background:#e8e5dc}
+
+.links{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.link-card{display:flex;justify-content:space-between;align-items:center;padding:19px 21px;border:1px solid var(--line);transition:.2s}.link-card:hover{background:var(--surface);border-color:var(--sage)}.link-card strong{display:block;font:20px var(--serif);font-weight:400}.link-card small{font-size:10px;color:var(--muted)}.arrow{font-size:20px;color:var(--sage)}footer{padding:28px 0 40px;display:flex;justify-content:space-between;gap:15px;color:var(--muted);font-size:10px;letter-spacing:.08em}
+@media(max-width:760px){.shell{width:calc(100% - 30px)}header{align-items:flex-start;flex-direction:column}.hero{grid-template-columns:1fr;padding:60px 0;gap:30px}.hero-art{height:270px}.section-head{align-items:flex-start;flex-direction:column}.about{grid-template-columns:1fr;gap:15px}.profile-grid{grid-template-columns:220px 1fr;gap:24px}.portrait{height:300px}.gallery{grid-template-columns:1fr 1fr}#films .photo{height:330px}.links{grid-template-columns:1fr}.dream-school{align-items:flex-start;flex-direction:column}.hau-mark{font-size:34px}section{padding:58px 0}footer{flex-direction:column}}
+@media(max-width:470px){nav{gap:12px}nav a{font-size:9px}.gallery{grid-template-columns:1fr}.profile-grid{grid-template-columns:1fr}.portrait{height:360px;max-width:320px;width:100%}#films .photo{height:420px}#music .gallery{grid-template-columns:1fr}#music .photo{max-width:360px;width:100%;margin:auto}#drawing .gallery{grid-template-columns:1fr}#drawing .photo{max-width:330px;width:100%;margin:auto}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header>
+  <a class="brand" href="#home">HẢI <b>/</b> ARCHIVE</a>
+  <nav><a href="#about">About</a><a href="#films">Films</a><a href="#music">Music</a><a href="#drawing">Drawing</a><a href="#links">Links</a></nav>
+</header>
+
+<main>
+
+<section id="about">
+  
+  <div class="profile-grid">
+    <div class="portrait">
+      <img src="images/my-photo.jpg" alt="Ảnh cá nhân của Nguyễn Hoàng Hải" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+      <div class="portrait-placeholder">Your portrait<br><small>Đặt ảnh cá nhân tại đây</small></div>
+    </div>
+    <div class="about">
+      <div class="label"></div>
+      <div class="about-copy">Mình là Nguyễn Hoàng Hải, hiện đang học lớp 12A3 tại trường THPT Hòn Gai.
+        <small>Mình thích dành thời gian khám phá âm nhạc, phim ảnh và hội họa. Mình đặc biệt yêu thích những tác phẩm có cá tính riêng trong cách kể chuyện, hình ảnh và âm thanh. Đây cũng là nơi mình lưu lại những điều như vậy, cùng một vài sản phẩm sáng tạo của bản thân. Trang web sẽ tiếp tục được bổ sung và thay đổi theo thời gian.</small>
+      </div>
+    </div>
+  </div>
+  <div class="dream-school">
+    <div><div class="eyebrow">A future destination</div><h3>Trường đại học mơ ước</h3><p>Đại học Kiến trúc Hà Nội <strong>— HAU</strong></p></div>
+    <div class="hau-mark">HAU</div>
+  </div>
+  
+</section>
+
+<section id="films">
+  <div class="section-head"><div><div class="eyebrow">02 / Films & animation</div><h2>Phim ảnh.</h2></div><p>Một vài bộ phim và tác phẩm hoạt hình tôi yêu thích.</p></div>
+  
+  <div class="gallery">
+    <article class="tile"><div class="photo"><img src="images/utena.jpg" alt="Revolutionary Girl Utena" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><div class="placeholder">Add image<br>Utena</div></div><div class="tile-info"><h3>Revolutionary Girl Utena</h3><p>Anime · 1997</p></div></article>
+    <article class="tile"><div class="photo"><img src="images/fight-club.jpg" alt="Fight Club" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><div class="placeholder">Add image<br>Fight Club</div></div><div class="tile-info"><h3>Fight Club</h3><p>Film · 1999</p></div></article>
+    <article class="tile"><div class="photo"><img src="images/children-of-the-sea.jpg" alt="Children of the Sea" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><div class="placeholder">Add image<br>Children of the Sea</div></div><div class="tile-info"><h3>Children of the Sea</h3><p>Anime film · 2019</p></div></article>
+  </div>
+ 
+</section>
+
+<section id="music">
+  <div class="section-head"><div><div class="eyebrow">03 / Music</div><h2>Âm nhạc.</h2></div><p>Những nghệ sĩ và ban nhạc tôi thường nghe.</p></div>
+ 
+  <div class="gallery music-grid">
+    <article class="tile"><div class="photo"><img src="images/kinoko-teikoku.jpg" alt="Kinoko Teikoku" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><div class="placeholder">Add image<br>Kinoko Teikoku</div></div><div class="tile-info"><h3>Kinoko Teikoku</h3><p>Japanese alternative / shoegaze</p></div></article>
+    <article class="tile"><div class="photo"><img src="images/slowdive.jpg" alt="Slowdive" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><div class="placeholder">Add image<br>Slowdive</div></div><div class="tile-info"><h3>Slowdive</h3><p>Shoegaze / dream pop</p></div></article>
+    <article class="tile"><div class="photo"><img src="images/mass-of-the-fermenting-dregs.jpg" alt="MASS OF THE FERMENTING DREGS" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><div class="placeholder">Add image<br>MASS OF THE FERMENTING DREGS</div></div><div class="tile-info"><h3>MASS OF THE FERMENTING DREGS</h3><p>Japanese rock</p></div></article>
+  </div>
+  
+</section>
+
+<section id="drawing">
+  <div class="section-head"><div><div class="eyebrow">04 / Drawing</div><h2>Vẽ.</h2></div><p>Một góc trưng bày những bức vẽ, phác thảo hoặc nghiên cứu hình ảnh của tôi.</p></div>
+  
+  <div class="gallery drawing-grid">
+    <article class="tile"><div class="photo"><img src="images/drawing-01.jpg" alt="Drawing 01" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><div class="placeholder">Your drawing<br>01</div></div><div class="tile-info"><h3>Study / 01</h3><p>Sketch · Illustration</p></div></article>
+    <article class="tile"><div class="photo"><img src="images/drawing-02.jpg" alt="Drawing 02" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><div class="placeholder">Your drawing<br>02</div></div><div class="tile-info"><h3>Study / 02</h3><p>Sketch · Illustration</p></div></article>
+    <article class="tile"><div class="photo"><img src="images/drawing-03.jpg" alt="Drawing 03" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><div class="placeholder">Your drawing<br>03</div></div><div class="tile-info"><h3>Study / 03</h3><p>Sketch · Illustration</p></div></article>
+  </div>
+  
+
+<section id="links">
+  <div class="section-head"><div><div class="eyebrow">05 / Elsewhere</div><h2>Links.</h2></div><p>Nơi dẫn đến những trang web khác của tôi hoặc những nơi tôi muốn chia sẻ.</p></div>
+  <div class="links">
+    <!-- Dán link YouTube / Spotify / SoundCloud của bài hát yêu thích vào href bên dưới -->
+    <a class="link-card" href="https://youtu.be/NE22jKGuT6Y" target="_blank" rel="noopener noreferrer"><span><strong>Bài nhạc yêu thích</strong><span class="arrow">↗</span></a>
+    <a class="link-card" href="https://www.pinterest.com/thuydung060696/?invite_code=98e9bd769cd7475e9f5dfd05b5b4aa79&sender=991284705389320990" target="_blank" rel="noopener noreferrer"><span><strong>Tài liệu luyện vẽ</strong><span class="arrow">↗</span></a>
+  </div>
+ 
+</section>
+</main>
+<footer><span>NGUYỄN HOÀNG HẢI / PERSONAL ARCHIVE</span><span>Made with curiosity · 2026</span><a href="#home">Back to top ↑</a></footer>
+</div>
+</body>
+</html>
